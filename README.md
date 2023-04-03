@@ -21,7 +21,7 @@ There are various aliases that helps with simplifying the process of accessing t
 vimrc is a custom set of instructions that the vim program uses as default.
 
 ## ./.gitignore
-.gitignore tells Git to ignore certain files or directories
+.gitignore tells Git to ignore certain files or directories.
 It prevents files and directories from being tracked by Git and are not pushed to GitHub.
 
 ## ./Makefile
