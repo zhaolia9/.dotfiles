@@ -18,8 +18,13 @@ mkdir -p ~/.TRASH
 
 #if the ‘.vimrc’ file exists in your home directory, change its name to ‘.bup vimrc’ and dump a message to ‘linuxsetup.log’ saying that the current .vimrc file was changed to ‘.bup vimrc’.
 
-mv ~/.vimrc ~/.bup_vimrc
-echo "The current '.vimrc' file was changed to '.bup_vimrc'." >> linuxsetup.log
+if [ -f "~/.vimrc" ]; then
+	mv ~/.vimrc ~/.bup_vimrc
+	echo "The current '.vimrc' file was changed to '.bup_vimrc'." >> linuxsetup.log
+else
+	echo ".vimrc not found" >> linuxsetup.log
+fi
+
 
 #Redirect (overwrite) the contents of the etc/vimrc file to a file called ‘.vimrc’ (with the dot in front) in your home directory
 cat ~/.dotfiles/etc/vimrc > ~/.vimrc
