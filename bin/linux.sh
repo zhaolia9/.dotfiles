@@ -17,9 +17,14 @@ fi
 mkdir -p ~/.TRASH
 
 #if the ‘.vimrc’ file exists in your home directory, change its name to ‘.bup vimrc’ and dump a message to ‘linuxsetup.log’ saying that the current .vimrc file was changed to ‘.bup vimrc’.
+# https://github.com/s7117/.dotfiles/blob/main/bin/ubuntu.sh
 
 if [ -f "~/.vimrc" ]; then
-	mv ~/.vimrc ~/.bup_vimrc
+	echo "LOG --> Found existing .vimrc file! Saving backup!"
+	mkdir ~/.vimrc_bups
+	cp ~/.vimrc ~/.vimrc_bups/.bup.vimrc
+	# Delete old .zshrc
+    	rm "~/.vimrc"
 	echo "The current '.vimrc' file was changed to '.bup_vimrc'." >> linuxsetup.log
 else
 	echo ".vimrc not found" >> linuxsetup.log
