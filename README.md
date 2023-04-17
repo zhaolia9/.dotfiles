@@ -28,3 +28,5 @@ It prevents files and directories from being tracked by Git and are not pushed t
 Makefile contains the targets: linux and clean.
 linux runs linux.sh while clean runs cleanup.sh
 
+## For future reference
+tar -C outer -zcvf outputfile.tar.gz test
