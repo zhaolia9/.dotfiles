@@ -29,4 +29,9 @@ Makefile contains the targets: linux and clean.
 linux runs linux.sh while clean runs cleanup.sh
 
 ## For future reference
-tar -C outer -zcvf outputfile.tar.gz test
+tar -C nested -zcvf outputfile.tar.gz intputdir/
+// compress files
+// This command first searches for any directories inside the outer directory and tarballs the files inside the directories inside the outer directory.
+tar -C nested -xvf outputfile.tar.gz
+// extract files
+// This command first searches for any directories inside the outer directory and extracts the files inside the directories inside the outer directory.
