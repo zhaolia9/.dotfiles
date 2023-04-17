@@ -30,8 +30,9 @@ linux runs linux.sh while clean runs cleanup.sh
 
 ## For future reference
 tar -C nested -zcvf outputfile.tar.gz intputdir/
-// compress files
-// This command first searches for any directories inside the outer directory and tarballs the files inside the directories inside the outer directory.
+compress files
+This command first searches for any directories inside the outer directory and tarballs the files inside the directories inside the outer directory.
 tar -C nested -xvf outputfile.tar.gz
-// extract files
-// This command first searches for any directories inside the outer directory and extracts the files inside the directories inside the outer directory.
+
+extract files
+This command first searches for any directories inside the outer directory and extracts the files inside the directories inside the outer directory.
